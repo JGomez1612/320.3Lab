@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Learners from './components/Learners';
+import Scores from './components/Scores';
 import './App.css'
 
 function App() {
@@ -34,8 +36,22 @@ function App() {
       }
     ]
   })
-}
 
+  return (
+    <>
+      <div>
+        <h1>Learners</h1>
+        {learners.learners.map((learner, i) => (
+          <div key={i}>
+            <Learners learner={learner} />
+            <Scores learner={learner} />
+          </div>
+        ))}
+
+      </div>
+    </>
+  )
+}
 
 
 

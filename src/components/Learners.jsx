@@ -1,7 +1,8 @@
-export default function Learners({learners}){
+export default function Learners({ learner }) {
     return (
         <div className="learner">
-            <h2>{learners.name}</h2>
+            <h2>{learner.name}</h2>
+            <p>{learner.bio}</p>
         </div>
     )
 }
